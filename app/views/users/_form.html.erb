@@ -1,0 +1,65 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :personal_website %><br>
+    <%= f.text_field :personal_website %>
+  </div>
+  <div class="field">
+    <%= f.label :buisness_website %><br>
+    <%= f.text_field :buisness_website %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.date_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :spouse_or_partner %><br>
+    <%= f.text_field :spouse_or_partner %>
+  </div>
+  <div class="field">
+    <%= f.label :children %><br>
+    <%= f.text_field :children %>
+  </div>
+  <div class="field">
+    <%= f.label :employer %><br>
+    <%= f.text_field :employer %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
